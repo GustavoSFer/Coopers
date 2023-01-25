@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 .logo {
   width: 190px;
   height: 50px;
@@ -9,6 +15,13 @@
   background-repeat: no-repeat;
   height: 640px;
   background-position: right;
+}
+
+.daily {
+  height: 410px;
+  position: absolute;
+  top: 140px;
+  left: 75px;
 }
 
 .escritorio {
@@ -25,4 +38,26 @@
   font-weight: 500;
   background-color: black;
   padding: 0 30px;
+}
+
+.dailly-jobs {
+  color: #00ff66;
+  font-size: 55px;
+  margin-top: -40px;
+}
+
+.btn-color {
+  background: #00ff66;
+  color: white;
+  padding: 5px 30px;
+  font-weight: 500;
+}
+.btn-color:hover {
+  background: #00a542;
+  color: white;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 600;
 }
