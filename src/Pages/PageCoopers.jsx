@@ -3,9 +3,14 @@ import Menu from '../Components/Menu';
 
 function PageCoopers() {
   return (
-    <main>
-      <Menu />
-    </main>
+    <div>
+      <div className="seta">
+        <main className="container">
+          <Menu />
+        </main>
+        <div className="escritorio" />
+      </div>
+    </div>
   );
 }
 

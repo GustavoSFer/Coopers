@@ -8,7 +8,7 @@ function Button({
   return (
     <button
       type="button"
-      className={`btn btn-cor mt-3 ${sty}`}
+      className={`btn mt-4 ${sty}`}
       onClick={click}
       data-testid={dataTestId}
     >
