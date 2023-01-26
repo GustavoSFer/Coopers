@@ -85,6 +85,14 @@ h1 {
 	transform: skewY(5deg);
 	color: white;
 }
+.skew>footer {
+	padding: 50px 100px;
+	font: 30px/1 sans-serif;
+	-ms-transform: skewY(5deg);
+	-webkit-transform: skewY(5deg);
+	transform: skewY(5deg);
+	color: white;
+}
 
 .width-list {
   text-align: center;
@@ -195,10 +203,18 @@ section {
   font-size: 15px;
 }
 
+.user {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 260px;
+  top: -60px;
+}
+
 .forms {
   position: absolute;
   top: 730px;
-  border: 1px solid green;
   width: 700px;
   padding: 65px;
 }
@@ -219,4 +235,33 @@ section {
 .btn-green {
   background-color: #00a542;
   width: 565px;
+}
+
+.footer {
+  position: absolute;
+  bottom: -500px;
+  width: 100%;
+}
+
+.teste5 {
+  border: 1px solid red;
+  position: absolute;
+  top: 800px;
+  height: 180px;
+  width: 100%;
+  background-color: black;
+  z-index: -2;
+}
+
+.riscaFooter {
+  width: 500px;
+  height: 30px;
+  background-color: #00a542;
+  margin-bottom: 0;
+  text-align: center;
+  margin: 125px 35%;
+}
+
+.helpFooter {
+  text-decoration: none;
 }

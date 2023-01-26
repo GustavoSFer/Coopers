@@ -6,6 +6,7 @@ import teaser from '../imagens/teaser.jpg';
 import makes from '../imagens/makes.jpeg';
 import custura from '../imagens/custura.jpeg';
 import Forms from '../Components/Forms';
+import Footer from '../Components/Footer';
 
 function PageCoopers() {
   return (
@@ -81,8 +82,14 @@ function PageCoopers() {
         <div className="forms">
           <Forms />
         </div>
+        <div className="footer">
+          <Footer />
+          <div className="teste5">
+            fdskojoifdsiofoisdfijsdo
+            <div className="riscaFooter" />
+          </div>
+        </div>
       </div>
-
     </div>
   );
 }
