@@ -5,6 +5,7 @@ import Menu from '../Components/Menu';
 import teaser from '../imagens/teaser.jpg';
 import makes from '../imagens/makes.jpeg';
 import custura from '../imagens/custura.jpeg';
+import Forms from '../Components/Forms';
 
 function PageCoopers() {
   return (
@@ -62,7 +63,7 @@ function PageCoopers() {
         <div className="good-things">
           <h3 className="position-things">good things</h3>
         </div>
-        <div className="teste">
+        <div className="cardGood">
           {/* Se tivesse as informações em uma APi poderia fazer usando o map */}
           <CardGoodThings
             img={custura}
@@ -76,6 +77,9 @@ function PageCoopers() {
             img={teaser}
             text="Careful with missunderstanding the difference between a list of things and a list of desires."
           />
+        </div>
+        <div className="forms">
+          <Forms />
         </div>
       </div>
 

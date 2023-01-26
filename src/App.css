@@ -164,7 +164,7 @@ section {
   height: 380px;
 }
 
-.teste {
+.cardGood {
   position: absolute;
   top: 100px;
   left: 355px;
@@ -193,4 +193,30 @@ section {
 .color {
   color: #00a542;
   font-size: 15px;
+}
+
+.forms {
+  position: absolute;
+  top: 730px;
+  border: 1px solid green;
+  width: 700px;
+  padding: 65px;
+}
+
+.border1 {
+  border: 1px solid black;
+}
+.border2 {
+  border: 1px solid black;
+  width: 565px;
+}
+
+.area {
+  width: 565px;
+  height: 150px;
+}
+
+.btn-green {
+  background-color: #00a542;
+  width: 565px;
 }
