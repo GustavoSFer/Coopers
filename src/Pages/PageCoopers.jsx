@@ -18,18 +18,42 @@ function PageCoopers() {
         </div>
       </div>
       <div className="skew">
-        <div>
+        <header>
           <h2>To-do List</h2>
           <div className="width-list">
             <p>
               Drag and drop to set your main priorities, check
             </p>
             <p>
-              when done and create what´s new.
+              when done and create what&apos;s new.
             </p>
           </div>
-        </div>
+        </header>
       </div>
+
+      <div className="d-flex justify-content-center list">
+        <section>
+          <div className="color-list-doing" />
+          <div className="m-5">
+            <h3 className="fs-2 fw-bold">To-do</h3>
+            <p className="fs-4">Take a breath.</p>
+            <p className="space-top fs-4">Start doing.</p>
+          </div>
+          <Button sty="btn-black btn-all mb-4">erase all</Button>
+        </section>
+
+        <section>
+          <div className="color-list-done" />
+          <div className="m-5">
+            <h3 className="fs-2 fw-bold">Done</h3>
+            <p className="fs-4">Congratulions!</p>
+            <p className="space-top fs-4">You have done 5 taks</p>
+          </div>
+          <Button sty="btn-black btn-all mb-4">erase all</Button>
+        </section>
+
+      </div>
+
     </div>
   );
 }
