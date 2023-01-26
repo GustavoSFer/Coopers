@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CardList() {
+function ListTask() {
   return (
     <section>
       teste
@@ -8,4 +8,4 @@ function CardList() {
   );
 }
 
-export default CardList;
+export default ListTask;

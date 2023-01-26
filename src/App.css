@@ -146,13 +146,51 @@ section {
 .good-things {
   border-radius: 5px;
   background-color: #00a542;
-  height: 300px;
+  height: 380px;
   width: 800px;
   padding: 20px;
 }
 
 .position-things {
-  padding: 40px;
+  padding: 40px 0 0 40px;
   font-weight: 600;
   color: white;
+}
+
+.good-things-notice {
+  background-color: white;
+  border-radius: 10px;
+  width: 290px;
+  height: 380px;
+}
+
+.teste {
+  position: absolute;
+  top: 100px;
+  left: 355px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.func {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: inline;
+  color: grey;
+  font-size: 13px;
+  margin: 10px;
+  padding: 4px 9px;
+}
+
+.size {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.color {
+  color: #00a542;
+  font-size: 15px;
 }

@@ -1,6 +1,10 @@
 import React from 'react';
 import Button from '../Components/Button';
+import CardGoodThings from '../Components/CardGoodThings';
 import Menu from '../Components/Menu';
+import teaser from '../imagens/teaser.jpg';
+import makes from '../imagens/makes.jpeg';
+import custura from '../imagens/custura.jpeg';
 
 function PageCoopers() {
   return (
@@ -57,9 +61,21 @@ function PageCoopers() {
       <div className="things d-flex justify-content-center">
         <div className="good-things">
           <h3 className="position-things">good things</h3>
-          <div>
-            card
-          </div>
+        </div>
+        <div className="teste">
+          {/* Se tivesse as informações em uma APi poderia fazer usando o map */}
+          <CardGoodThings
+            img={custura}
+            text="Organize your daily job enhance your life performance"
+          />
+          <CardGoodThings
+            img={makes}
+            text="Mark one activity as done makes your brain understands the power of doing."
+          />
+          <CardGoodThings
+            img={teaser}
+            text="Careful with missunderstanding the difference between a list of things and a list of desires."
+          />
         </div>
       </div>
 
