@@ -102,12 +102,13 @@ h2 {
 .list {
   position: absolute;
   top: 1040px;
-  left: 20%;
+  left: 25%;
   text-align: center;
 }
 
 section {
-  width: 380px;
+  border-radius: 3px;
+  width: 330px;
   margin: 15px;
   box-shadow: 7px 7px 7px 3px rgba(0, 0, 0, 0.2);
 }
@@ -134,4 +135,24 @@ section {
   padding: 10px 100px;
   background-color: black;
   color: rgb(223, 214, 214);
+}
+
+.things {
+  position: absolute;
+  top: 1500px;
+  width: 100%;
+}
+
+.good-things {
+  border-radius: 5px;
+  background-color: #00a542;
+  height: 300px;
+  width: 800px;
+  padding: 20px;
+}
+
+.position-things {
+  padding: 40px;
+  font-weight: 600;
+  color: white;
 }

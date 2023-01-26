@@ -54,6 +54,15 @@ function PageCoopers() {
 
       </div>
 
+      <div className="things d-flex justify-content-center">
+        <div className="good-things">
+          <h3 className="position-things">good things</h3>
+          <div>
+            card
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
