@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../Components/Button';
 import CardGoodThings from '../Components/CardGoodThings';
+import { tasks } from '../Services';
 import Menu from '../Components/Menu';
 import teaser from '../imagens/teaser.jpg';
 import makes from '../imagens/makes.jpeg';
@@ -9,6 +10,24 @@ import Forms from '../Components/Forms';
 import Footer from '../Components/Footer';
 
 function PageCoopers() {
+  const [pendente, setPendente] = useState([]);
+  const [feito, setFeito] = useState([]);
+
+  const api = async () => {
+    const pen = await tasks('/status', { status: 'pendente' });
+    setPendente(pen);
+
+    const fei = await tasks('/status', { status: 'feito' });
+    setFeito(fei);
+  };
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+      api();
+    }
+  }, []);
+
   return (
     <div>
       <div className="seta">
@@ -44,13 +63,12 @@ function PageCoopers() {
             <h3 className="fs-2 fw-bold">To-do</h3>
             <p className="fs-4">Take a breath.</p>
             <p className="space-top fs-4">Start doing.</p>
-            <ul>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-            </ul>
+            {
+              pendente && pendente.map((item) => (
+                // eslint-disable-next-line no-underscore-dangle
+                <div key={item._id}>{item.task}</div>
+              ))
+            }
           </div>
           <Button sty="btn-black btn-all mb-4">erase all</Button>
         </section>
@@ -60,14 +78,13 @@ function PageCoopers() {
           <div className="m-5">
             <h3 className="fs-2 fw-bold">Done</h3>
             <p className="fs-4">Congratulions!</p>
-            <p className="space-top fs-4">You have done 5 taks</p>
-            <ul>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-              <li>lista aqui</li>
-            </ul>
+            <p className="space-top fs-4">{`You have done ${feito.length} taks`}</p>
+            {
+              feito && feito.map((item) => (
+                // eslint-disable-next-line no-underscore-dangle
+                <div key={item._id}>{item.task}</div>
+              ))
+            }
           </div>
           <Button sty="btn-black btn-all mb-4">erase all</Button>
         </section>
@@ -98,8 +115,8 @@ function PageCoopers() {
         </div>
         <div className="footer">
           <Footer />
-          <div className="teste5">
-            fdskojoifdsiofoisdfijsdo
+          <div className="risca">
+            -
             <div className="riscaFooter" />
           </div>
         </div>

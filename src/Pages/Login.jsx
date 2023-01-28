@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../Components/Input';
 import Button from '../Components/Button';
-import loginUser from '../Services';
+import { loginUser } from '../Services';
 import imgLogin from '../imagens/login.png';
 import MyContext from '../MyContext/MyContext';
 
@@ -20,10 +20,14 @@ function Login() {
   const handleClick = async () => {
     try {
       const body = { email, password };
-      const login = await loginUser('/loginUser', body);
+      const login = await loginUser('/user', body);
       setMsgErro('');
       localStorage.setItem('user', JSON.stringify(login));
+      setActive(!active);
+      setEmail('');
+      setPassword('');
       history('/');
+      document.location.reload(true);
     } catch (error) {
       setMsgErro(error);
     }
@@ -57,7 +61,7 @@ function Login() {
         </div>
         <div className="mb-3 teste">
           <Input
-            type="text"
+            type="password"
             name="password"
             handleChange={(e) => setPassword(e.target.value)}
             value={password}
@@ -73,7 +77,7 @@ function Login() {
             Sign in
           </Button>
         </div>
-        { msgErro && <p className="text-danger text-center">E-mail ou senha incorreto!</p> }
+        { msgErro && <p className="text-danger text-center">E-mail ou senha incorreto!!!</p> }
       </form>
       <p className="m-3 text-white">
         Não tem uma conta?
