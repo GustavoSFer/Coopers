@@ -147,7 +147,7 @@ section {
 
 .things {
   position: absolute;
-  top: 1500px;
+  top: 1700px;
   width: 100%;
 }
 
@@ -168,14 +168,14 @@ section {
 .good-things-notice {
   background-color: white;
   border-radius: 10px;
-  width: 290px;
-  height: 380px;
+  width: 20vw;
+  height: 48vh;
 }
 
 .cardGood {
   position: absolute;
   top: 100px;
-  left: 355px;
+  left: 25%;
 }
 
 .img {
@@ -283,4 +283,26 @@ section {
 
 input {
   border: 1px solid rgb(81, 79, 79);
+}
+
+@media only screen and (max-width: 960px) {
+  .seta {
+    background-image: none;
+  }
+  .escritorio {
+    background-image: none;
+  }
+  .things {
+    top: 1900px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .cardGood {
+    left: 5%;
+  }
+  .good-things-notice {
+    width: 25vw;
+    height: 58vh;
+  }
 }

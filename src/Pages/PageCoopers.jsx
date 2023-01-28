@@ -37,23 +37,37 @@ function PageCoopers() {
         </header>
       </div>
 
-      <div className="d-flex justify-content-center list">
-        <section>
+      <div className="list row">
+        <section className="col-5">
           <div className="color-list-doing" />
           <div className="m-5">
             <h3 className="fs-2 fw-bold">To-do</h3>
             <p className="fs-4">Take a breath.</p>
             <p className="space-top fs-4">Start doing.</p>
+            <ul>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+            </ul>
           </div>
           <Button sty="btn-black btn-all mb-4">erase all</Button>
         </section>
 
-        <section>
+        <section className="col-5">
           <div className="color-list-done" />
           <div className="m-5">
             <h3 className="fs-2 fw-bold">Done</h3>
             <p className="fs-4">Congratulions!</p>
             <p className="space-top fs-4">You have done 5 taks</p>
+            <ul>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+              <li>lista aqui</li>
+            </ul>
           </div>
           <Button sty="btn-black btn-all mb-4">erase all</Button>
         </section>
