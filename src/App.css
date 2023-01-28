@@ -265,3 +265,22 @@ section {
 .helpFooter {
   text-decoration: none;
 }
+
+.icon {
+  display: none;
+}
+
+.iconActive {
+  display: block;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+  top: 80px;
+  width: 700px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input {
+  border: 1px solid rgb(81, 79, 79);
+}
