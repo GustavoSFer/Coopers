@@ -13,7 +13,12 @@ const tasks = async (endpoint, body) => {
   return data;
 };
 
+const deleteTask = async (endpoint, params) => {
+  await axios.delete(`${baseURL}${endpoint}${params}`);
+};
+
 export {
   loginUser,
   tasks,
+  deleteTask,
 };

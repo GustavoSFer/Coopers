@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../Components/Button';
 import CardGoodThings from '../Components/CardGoodThings';
-import { tasks } from '../Services';
+import { tasks, deleteTask } from '../Services';
 import Menu from '../Components/Menu';
 import teaser from '../imagens/teaser.jpg';
 import makes from '../imagens/makes.jpeg';
@@ -33,6 +33,16 @@ function PageCoopers() {
       api();
     }
   }, []);
+
+  useEffect(() => {
+    api();
+  }, [feito, pendente]);
+
+  const marcarFeito = async (item) => {
+    await tasks('/', { task: item.task, status: 'feito' });
+    // eslint-disable-next-line no-underscore-dangle
+    await deleteTask('/', item._id);
+  };
 
   return (
     <div>
@@ -76,7 +86,9 @@ function PageCoopers() {
             {
               pendente && pendente.map((item) => (
                 // eslint-disable-next-line no-underscore-dangle
-                <div key={item._id}>{item.task}</div>
+                <div key={item._id} className="marcar-feito">
+                  <buton onClick={() => marcarFeito(item)}>{item.task}</buton>
+                </div>
               ))
             }
           </div>
