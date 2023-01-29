@@ -8,10 +8,16 @@ import makes from '../imagens/makes.jpeg';
 import custura from '../imagens/custura.jpeg';
 import Forms from '../Components/Forms';
 import Footer from '../Components/Footer';
+import AddTasks from './AddTasks';
 
 function PageCoopers() {
   const [pendente, setPendente] = useState([]);
   const [feito, setFeito] = useState([]);
+  const [addTask, setAddTask] = useState(false);
+
+  const handleClick = () => {
+    setAddTask(!addTask);
+  };
 
   const api = async () => {
     const pen = await tasks('/status', { status: 'pendente' });
@@ -52,11 +58,15 @@ function PageCoopers() {
             <p>
               when done and create what&apos;s new.
             </p>
+            <Button sty="btn-color" click={handleClick}>{addTask ? 'Close Task' : 'Add Task'}</Button>
+            <div className={addTask ? 'iconActive task' : 'icon'}>
+              <AddTasks />
+            </div>
           </div>
         </header>
       </div>
 
-      <div className="list row">
+      <div className="list row mt-5">
         <section className="col-5">
           <div className="color-list-doing" />
           <div className="m-5">

@@ -306,6 +306,15 @@ input {
   width: 140%;
 }
 
+.task {
+  padding: 20px;
+  color: black;
+  background-color: white;
+  margin-top: 180px;
+  position: absolute;
+  z-index: -4;
+}
+
 @media only screen and (max-width: 960px) {
   .seta {
     background-image: none;
