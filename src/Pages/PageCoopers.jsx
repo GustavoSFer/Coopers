@@ -38,6 +38,20 @@ function PageCoopers() {
     api();
   }, [feito, pendente]);
 
+  const removePendente = async () => {
+    for (let i = 0; i < pendente.length; i += 1) {
+    // eslint-disable-next-line no-underscore-dangle
+      Promise.all(deleteTask('/', pendente[i]._id));
+    }
+  };
+
+  const removeFeito = async () => {
+    for (let i = 0; i < feito.length; i += 1) {
+      // eslint-disable-next-line no-underscore-dangle
+      Promise.all(deleteTask('/', feito[i]._id));
+    }
+  };
+
   const marcarFeito = async (item) => {
     await tasks('/', { task: item.task, status: 'feito' });
     // eslint-disable-next-line no-underscore-dangle
@@ -92,7 +106,7 @@ function PageCoopers() {
               ))
             }
           </div>
-          <Button sty="btn-black btn-all mb-4">erase all</Button>
+          <Button sty="btn-black btn-all mb-4" click={removePendente}>erase all</Button>
         </section>
 
         <section className="col-5">
@@ -108,7 +122,7 @@ function PageCoopers() {
               ))
             }
           </div>
-          <Button sty="btn-black btn-all mb-4">erase all</Button>
+          <Button sty="btn-black btn-all mb-4" click={removeFeito}>erase all</Button>
         </section>
 
       </div>
