@@ -9,7 +9,6 @@ const loginUser = async (endpoint, body) => {
 };
 
 const tasks = async (endpoint, body) => {
-  console.log(body);
   const { data } = await axios.post((baseURL + endpoint), body);
   return data;
 };
