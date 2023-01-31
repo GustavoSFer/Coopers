@@ -51,7 +51,7 @@ function Cadastro() {
         <div className="text-center">
           <Button
             click={handleClick}
-            sty="btn-color w-75 btn-border"
+            sty="btn-color-cadastro w-75 btn-border"
             dataTestId="btn-entrar"
           >
             Sign in
@@ -59,6 +59,13 @@ function Cadastro() {
           <div>
             { msg }
           </div>
+          <Button
+            click={redirect}
+            sty="btn-color-cadastro w-75 btn-border"
+            dataTestId="btn-entrar"
+          >
+            CANCEL
+          </Button>
         </div>
       </form>
     </main>

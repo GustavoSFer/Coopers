@@ -61,7 +61,7 @@ function PageCoopers() {
   return (
     <div>
       <div className="seta">
-        <main className="container">
+        <main>
           <Menu />
         </main>
         <div className="escritorio" />
@@ -75,7 +75,7 @@ function PageCoopers() {
       <div className="skew">
         <header>
           <h2>To-do List</h2>
-          <div className="width-list">
+          <div>
             <p>
               Drag and drop to set your main priorities, check
             </p>
@@ -84,7 +84,7 @@ function PageCoopers() {
             </p>
             <Button sty="btn-color" click={handleClick}>{addTask ? 'Close Task' : 'Add Task'}</Button>
             <div className={addTask ? 'iconActive task' : 'icon'}>
-              <AddTasks />
+              <AddTasks close={() => setAddTask(!addTask)} />
             </div>
           </div>
         </header>

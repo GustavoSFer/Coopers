@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { tasks } from '../Services';
 import Button from '../Components/Button';
 import Input from '../Components/Input';
 
-function AddTasks() {
+function AddTasks({ close }) {
   const [tarefa, setTarefa] = useState('');
   const [msg, setMsg] = useState('');
 
@@ -19,7 +20,10 @@ function AddTasks() {
   };
 
   return (
-    <main className="">
+    <main>
+      <div className="text-end">
+        <button type="button" onClick={close} className="p-2 fw-bold">Close</button>
+      </div>
       <div className="p-3">
         <Input
           type="text"
@@ -27,13 +31,17 @@ function AddTasks() {
           text="Informe a nova tarefa"
           handleChange={(e) => setTarefa(e.target.value)}
           value={tarefa}
-          sty="border2"
+          sty="border2 input-tesk"
         />
         <div className="fw-bold text-dark">{msg}</div>
-        <Button click={add} sty="btn-color">ADICIONAR</Button>
+        <Button click={add} sty="btn-color w-100">ADICIONAR</Button>
       </div>
     </main>
   );
 }
+
+AddTasks.propTypes = {
+  close: PropTypes.func.isRequired,
+};
 
 export default AddTasks;

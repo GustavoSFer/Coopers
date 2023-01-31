@@ -38,7 +38,7 @@ function Login() {
   };
 
   return (
-    <main>
+    <main className="login">
       <div className="row">
         <div className="text-end">
           <Button click={closeClick} sty="fw-bold">Close</Button>
