@@ -79,10 +79,12 @@ function Login() {
         </div>
         { msgErro && <p className="text-danger text-center">E-mail ou senha incorreto!!!</p> }
       </form>
-      <p className="m-3 text-white">
-        Não tem uma conta?
-        <Link to="/cadastro" className="register">Registre-se</Link>
-      </p>
+      <div className="text-center">
+        <p className="m-3">
+          Não tem uma conta?
+          <Link to="/cadastro" className="register">Registre-se</Link>
+        </p>
+      </div>
     </main>
   );
 }
