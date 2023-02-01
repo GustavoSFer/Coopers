@@ -107,7 +107,7 @@ h2 {
 
 .list {
   position: absolute;
-  top: 1040px;
+  top: 140%;
   left: 25%;
   text-align: center;
 }
@@ -221,9 +221,10 @@ section {
 
 .forms {
   position: absolute;
-  top: 730px;
-  width: 700px;
+  top: 190%;
   padding: 65px;
+  margin: auto;
+  text-align: center;
 }
 
 .border1 {
@@ -257,6 +258,7 @@ section {
   width: 100%;
   background-color: black;
   z-index: -2;
+  text-align: center;
 }
 
 .riscaFooter {
@@ -265,7 +267,7 @@ section {
   background-color: #00a542;
   margin-bottom: 0;
   text-align: center;
-  margin: 125px 35%;
+  margin: 125px auto;
 }
 
 .helpFooter {
@@ -347,11 +349,17 @@ input {
     margin: auto;
     border: 1px solid red;
   }
+  .space-top {
+    margin-top: -10px;
+  }
+  .cardGood {
+    left: 15%;
+  }
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 650px) {
   .cardGood {
-    left: 5%;
+    left: 0;
   }
   .good-things-notice {
     width: 25vw;
@@ -370,5 +378,9 @@ input {
   .task {
     max-width: 80%;
     margin-left: -25%;
+  }
+  .riscaFooter {
+    width: 100px;
+    height: 20px;
   }
 }

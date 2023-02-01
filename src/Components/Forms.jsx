@@ -13,7 +13,9 @@ function Forms() {
   return (
     <form action="caminho" method="post">
       <img src={user} alt="user" className="user" />
-      <img src={getIn} alt="get in touch" />
+      <div className="text-start">
+        <img src={getIn} alt="get in touch" />
+      </div>
       <div className="mb-3 teste">
         <Input
           type="text"

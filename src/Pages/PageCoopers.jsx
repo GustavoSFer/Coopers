@@ -14,6 +14,7 @@ function PageCoopers() {
   const [pendente, setPendente] = useState([]);
   const [feito, setFeito] = useState([]);
   const [addTask, setAddTask] = useState(false);
+  const [logado, setLogado] = useState(false);
 
   const handleClick = () => {
     setAddTask(!addTask);
@@ -31,6 +32,7 @@ function PageCoopers() {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       api();
+      setLogado(true);
     }
   }, []);
 
@@ -82,16 +84,22 @@ function PageCoopers() {
             <p>
               when done and create what&apos;s new.
             </p>
-            <Button sty="btn-color" click={handleClick}>{addTask ? 'Close Task' : 'Add Task'}</Button>
-            <div className={addTask ? 'iconActive task' : 'icon'}>
-              <AddTasks close={() => setAddTask(!addTask)} />
-            </div>
+            {
+              logado && (
+                <div>
+                  <Button sty="btn-color" click={handleClick}>{addTask ? 'Close Task' : 'Add Task'}</Button>
+                  <div className={addTask ? 'iconActive task' : 'icon'}>
+                    <AddTasks close={() => setAddTask(!addTask)} />
+                  </div>
+                </div>
+              )
+            }
           </div>
         </header>
       </div>
 
-      <div className="list row mt-5">
-        <section className="col-5">
+      <div className="list row mt-5" id="#list">
+        <section className="col-md-5 col-ms-12">
           <div className="color-list-doing" />
           <div className="m-5">
             <h3 className="fs-2 fw-bold">To-do</h3>
@@ -101,7 +109,7 @@ function PageCoopers() {
               pendente && pendente.map((item) => (
                 // eslint-disable-next-line no-underscore-dangle
                 <div key={item._id} className="marcar-feito">
-                  <buton onClick={() => marcarFeito(item)}>{item.task}</buton>
+                  <buton onClick={() => marcarFeito(item)} className="btn-arase">{item.task}</buton>
                 </div>
               ))
             }
@@ -109,7 +117,7 @@ function PageCoopers() {
           <Button sty="btn-black btn-all mb-4" click={removePendente}>erase all</Button>
         </section>
 
-        <section className="col-5">
+        <section className="col-md-5 col-ms-12">
           <div className="color-list-done" />
           <div className="m-5">
             <h3 className="fs-2 fw-bold">Done</h3>
