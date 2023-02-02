@@ -232,7 +232,10 @@ section {
 }
 .border2 {
   border: 1px solid black;
-  width: 565px;
+}
+
+.login-input {
+  text-align: center;
 }
 
 .area {

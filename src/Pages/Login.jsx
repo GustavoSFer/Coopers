@@ -50,7 +50,7 @@ function Login() {
         </div>
       </div>
       <form action="" method="post" className="p-5">
-        <div className="mb-3 teste">
+        <div className="mb-3 login-input">
           <Input
             type="text"
             name="E-mail"
@@ -59,7 +59,7 @@ function Login() {
             sty="border2"
           />
         </div>
-        <div className="mb-3 teste">
+        <div className="mb-3 login-input">
           <Input
             type="password"
             name="password"
